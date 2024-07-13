@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Practice Lab</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: pink;
+            --secondary-color: red;
+            --success-color: green;
+            --danger-color:  red;
+            --warning-color: lightred;
+            --info-color: grey;
+            --light-color: lightgrey;
+            --dark-color: black;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .jumbotron {
+            background-color: var(--light-color);
+        }
+
+        .footer {
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .icon {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Brand</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-center">
+            <h1 class="display-4">Welcome to Our Website</h1>
+            <p class="lead">We provide the best services to help you succeed.</p>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="container py-5">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <div class="icon mb-3"><i class="bi bi-speedometer2"></i></div>
+                <h3>Fast Performance</h3>
+                <p>We ensure your projects run quickly and efficiently with top-tier optimization techniques.</p>
+                <img src="https://images.pexels.com/photos/261628/pexels-photo-261628.jpeg" alt="Fast Performance" class="img-fluid">
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="icon mb-3"><i class="bi bi-gear"></i></div>
+                <h3>Technical Support</h3>
+                <p>Our team provides 24/7 technical support to resolve any issues you might encounter.</p>
+                <img src="https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg" alt="Technical Support" class="img-fluid">
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="icon mb-3"><i class="bi bi-layers"></i></div>
+                <h3>Custom Solutions</h3>
+                <p>We deliver customized solutions tailored to meet your unique business needs.</p>
+                <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg" alt="Custom Solutions" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio" class="container py-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg" class="card-img-top" alt="Business Management">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 1</h5>
+                        <p class="card-text">A comprehensive solution for managing your business operations.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/3182759/pexels-photo-3182759.jpeg" class="card-img-top" alt="Customer Engagement">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 2</h5>
+                        <p class="card-text">A user-friendly platform for enhancing customer engagement.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg" class="card-img-top" alt="Workflow Productivity">
+                    <div class="card-body">
+                        <h5 class="card-title">Project 3</h5>
+                        <p class="card-text">An innovative tool for streamlining workflow and boosting productivity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div id="contact" class="container py-5">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-3 text-center footer">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
